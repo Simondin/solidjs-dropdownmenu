@@ -1,0 +1,24 @@
+@import url("./dark-theme-props.css");
+@import url("./light-theme-props.css");
+@import url("./spacing-props.css");
+@import url("./radius-props.css");
+
+
+.std {
+    --std-gutter-divider: 2;
+    --std-radius-divider: 2;
+}
+
+@media (min-width: 700px) {
+    .std {
+        --std-gutter-divider: 1.2;
+        --std-radius-divider: 1.2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .std {
+        --std-gutter-divider: 1;
+        --std-radius-divider: 1;
+    }
+}

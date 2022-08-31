@@ -1,0 +1,112 @@
+@import url('./theme.css');
+
+.std .background {
+    background-color: var(--std-color-bg);
+}
+
+.std .flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.std .flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.std .justify-center {
+    justify-content: center;
+}
+
+.std .justify-between {
+    justify-content: space-between;
+}
+
+.std .align-center {
+    align-items: center;
+}
+
+.std .elevation-s {
+    box-shadow: var(--std-shadow-s);
+}
+
+.std .elevation-m {
+    box-shadow: var(--std-shadow-m);
+}
+
+.std .elevation-l {
+    box-shadow: var(--std-shadow-l);
+}
+
+.std .radius-s {
+    border-radius: var(--std-radius-s)
+}
+
+.std .radius-m {
+    border-radius: var(--std-radius-m)
+}
+
+.std .radius-l {
+    border-radius: var(--std-radius-l)
+}
+
+.std .margin-s {
+    margin: var(--std-gutter-s)
+}
+
+.std .margin-m {
+    margin: var(--std-gutter-m)
+}
+
+.std .margin-l {
+   margin: var(--std-gutter-l)
+}
+
+.std .margin-xl {
+   margin: var(--std-gutter-xl)
+}
+
+.std .padding-s {
+    padding: var(--std-gutter-s)
+}
+
+.std .padding-m {
+    padding: var(--std-gutter-m)
+}
+
+.std .padding-l {
+   padding: var(--std-gutter-l)
+}
+
+.std .padding-xl {
+   padding: var(--std-gutter-xl)
+}
+
+.std .font-bold {
+    font-weight: bold;
+}
+
+.std .font-light {
+    font-weight: 300;
+}
+
+.std .font-thin {
+    font-weight: 100;
+}
+
+.std .hover:hover {
+    background-color: var(--std-color-hover);
+}
+
+.std .fade-in {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

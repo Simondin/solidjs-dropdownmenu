@@ -1,0 +1,9 @@
+.std[app-theme="dark"] {
+    --std-color-primary-accent: #6e494e;
+    --std-color-primary-tint1: #b8888b;
+    --std-color-primary-tint2: #dad8b5;
+    --std-color-separator: #eaeaea;
+    --std-color-hover: #777777;
+    --std-color-bg: #282828;
+    --fill-color: #282828;
+}

@@ -1,0 +1,7 @@
+.std {
+    --std-radius-xs: calc(2px / var(--std-radius-divider, 1));
+    --std-radius-s: calc(4px / var(--std-radius-divider, 1));
+    --std-radius-m: calc(5px / var(--std-radius-divider, 1));
+    --std-radius-l: calc(12px / var(--std-radius-divider, 1));
+    --std-radius-xl: calc(16px / var(--std-radius-divider, 1));
+}

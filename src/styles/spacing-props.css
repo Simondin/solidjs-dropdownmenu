@@ -1,0 +1,7 @@
+.std {
+    --std-gutter-xs: calc(4px / var(--std-gutter-divider, 1));
+    --std-gutter-s: calc(8px / var(--std-gutter-divider, 1));
+    --std-gutter-m: calc(12px / var(--std-gutter-divider, 1));
+    --std-gutter-l: calc(16px / var(--std-gutter-divider, 1));
+    --std-gutter-xl: calc(24px / var(--std-gutter-divider, 1));
+}

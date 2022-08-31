@@ -1,0 +1,14 @@
+.Dropdown {
+    background-color: #fafafa;
+    display: inline-block;
+}
+
+.DropdownBody {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.DropdownBody > * {
+    margin-top: 8px;
+    margin-left: 8px;
+}
