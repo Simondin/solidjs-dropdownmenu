@@ -25,6 +25,7 @@ type SelectionContextValue = [
     state: SelectionContextState,
     actions: {
         updateSelection: (parent: number, key: string) => void;
+        clearSelections: () => void;
     }
 ]
 
@@ -38,6 +39,7 @@ const SelectionContext = createContext<SelectionContextValue>([
     defaultState,
     {
         updateSelection: () => undefined,
+        clearSelections: () => undefined,
     }
 ])
 
@@ -86,27 +88,34 @@ export const SelectionProvider: ParentComponent<SelectionContextProps> = (props)
                 all[level] = key
             }
 
-            let current = ''
+            const selectedItems = []
             for (const [key, value] of Object.entries(all)) {
                 const { item } = prev.data[key][value]
 
-                const isLastLevel = parseInt(key) === level
-
-                current += item.label + (isLastLevel ? '': '/')
+                selectedItems.push(item.label)
             }
 
             return {
                 ...prev,
                 all,
-                current,
+                current: selectedItems.join(' / '),
             }
         })
-    };
+    }
+
+    const clearSelections = () => setState(prev => ({
+        ...defaultState,
+        data: prev.data
+    }))
+
 
     return (
         <SelectionContext.Provider value={[
             state,
-            { updateSelection }
+            {
+                updateSelection,
+                clearSelections
+            }
         ]} >
             {props.children}
         </SelectionContext.Provider>

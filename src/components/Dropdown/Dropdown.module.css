@@ -1,14 +1,97 @@
-.Dropdown {
-    background-color: #fafafa;
-    display: inline-block;
+@import url('../../styles/theme.css');
+
+.DropdownBtn {
+    background-color: var(--color-bg);
+    border: solid var(--border) var(--color-separator);
+    border-radius: var(--radius-m);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 150px;
+    padding: var(--height-m) 0;
+}
+
+.DropdownBtn.DropdownSize_xs {
+    padding: var(--height-xs) 0;
+}
+
+.DropdownBtn.DropdownSize_s {
+    padding: var(--height-s) 0;
+}
+
+.DropdownBtn.DropdownSize_m {
+    padding: var(--height-m) 0;
+}
+
+.DropdownBtn.DropdownSize_l {
+    padding: var(--height-l) 0;
+}
+
+.DropdownBtn.DropdownSize_xl {
+    padding: var(--height-xl) 0;
+}
+
+.DropdownBtn.Block {
+    display: flex;
+}
+
+.DropdownBtn.DropdownHeaderBlock {
+    display: flex;
+}
+
+.DropdownBtn > * {
+    margin-left: var(--gutter-s);
+}
+
+.DropdownBtnLabel {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-color-disabled);
+}
+
+.DropdownBtnLabel.Selected {
+    color: var(--text-color-primary);
+    font-weight: 600;
+}
+
+.DropdownBtnActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .DropdownBody {
-    /* display: flex;
-    flex-direction: column; */
+    background-color: var(--color-bg);
+    display: inline-flex;
+    margin-top: var(--gutter-m);
+    border: solid var(--border) var(--color-separator);
+    border-radius: var(--radius-s);
+    padding: var(--gutter-xs);
+    min-width: 150px;
+    position: absolute;
+    z-index: 10;
 }
 
-.DropdownBody > * {
-    margin-top: 8px;
-    margin-left: 8px;
+.DropdownBodyGroup {
+    display: grid;
+    grid-auto-rows: calc(var(--size-m)* 2);
+}
+
+.DropdownBodyGroup.GroupSize_s {
+    grid-auto-rows: calc(var(--size-s)* 2);
+}
+
+.DropdownBodyGroup.GroupSize_m {
+    grid-auto-rows: calc(var(--size-m)* 2);
+}
+
+.DropdownBodyGroup.GroupSize_l {
+    grid-auto-rows: calc(var(--size-l)* 2);
+}
+
+.DropdownBodyGroup.GroupSize_xl {
+    grid-auto-rows: calc(var(--size-xl)* 2);
 }

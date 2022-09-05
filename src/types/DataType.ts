@@ -1,4 +1,5 @@
 export type DataType = {
     label: string,
-    children?: DataType[]
+    children?: DataType[],
+    disabled?: boolean,
 }

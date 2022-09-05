@@ -1,9 +1,14 @@
 .std[app-theme="dark"] {
-    --std-color-primary-accent: #6e494e;
-    --std-color-primary-tint1: #b8888b;
-    --std-color-primary-tint2: #dad8b5;
-    --std-color-separator: #eaeaea;
-    --std-color-hover: #777777;
-    --std-color-bg: #282828;
-    --fill-color: #282828;
+    --text-color-primary: #ffffff;
+    --text-color-disabled: #7d7d7d;
+    --color-primary-accent: #6e494e;
+    --color-primary-tint1: #b8888b;
+    --color-primary-tint2: #dad8b5;
+    --color-separator: #3c3f43;
+    --color-hover: #3c3f43;
+    --color-cancel: #f94f4f;
+    --main-color-bg: #262626;
+    --color-bg: #292D33;
+    --fill-color: #ffffff;
+    --border-color-primary: #3c3f43;
 }

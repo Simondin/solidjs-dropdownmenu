@@ -1,45 +1,41 @@
 import { createContext, useContext, ParentComponent } from "solid-js";
 import { createStore } from "solid-js/store";
 
+export enum ThemeEnum {
+    light = 'light',
+    dark = 'dark'
+}
+
 export type ThemeContextState = {
-    readonly color: string;
-    readonly title: string;
-};
+    readonly theme?: ThemeEnum | string;
+}
+
 export type ThemeContextValue = [
     state: ThemeContextState,
     actions: {
-        changeColor: (color: string) => void;
-        changeTitle: (title: string) => void;
+        changeTheme: () => void;
     }
 ];
 
-const defaultState = {
-    color: "#66e6ac",
-    title: "Fallback Title",
-};
+const defaultState : ThemeContextState = {
+    theme: ThemeEnum.light
+}
 
 const ThemeContext = createContext<ThemeContextValue>([
     defaultState,
     {
-        changeColor: () => undefined,
-        changeTitle: () => undefined,
+        changeTheme: () => undefined,
     },
 ]);
 
-export const ThemeProvider: ParentComponent<{
-    color?: string;
-    title?: string;
-}> = (props) => {
-    const [state, setState] = createStore({
-        color: props.color ?? defaultState.color,
-        title: props.title ?? defaultState.title,
-    });
+export const ThemeProvider: ParentComponent<ThemeContextState> = (props) => {
+    const { dark, light } = ThemeEnum
+    const [state, setState] = createStore({ theme: props.theme ?? defaultState.theme })
 
-    const changeColor = (color: string) => setState("color", color);
-    const changeTitle = (title: string) => setState("title", title);
+    const changeTheme = () => setState(prev => ({ theme: prev.theme === light ? dark : light}))
 
     return (
-        <ThemeContext.Provider value={[state, { changeColor, changeTitle }]}>
+        <ThemeContext.Provider value={[state, { changeTheme }]}>
             {props.children}
         </ThemeContext.Provider>
     );
