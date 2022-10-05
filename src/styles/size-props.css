@@ -1,0 +1,16 @@
+.std {
+    --size-xxs: calc(var(--gutter, 4px) * 1);   /*  4px  */
+    --size-xs: calc(var(--gutter, 4px) * 2);    /*  8px */
+    --size-s: calc(var(--gutter, 4px) * 3);     /*  12px */
+    --size-m: calc(var(--gutter, 4px) * 4);     /*  16px */
+    --size-l: calc(var(--gutter, 4px) * 5);     /*  20px */
+    --size-xl: calc(var(--gutter, 4px) * 6);    /*  24px */
+    --size-xxl: calc(var(--gutter, 4px) * 8);   /*  32px */
+    --size-xxxl: calc(var(--gutter, 4px) * 12); /*  48px */
+
+    --height-xs: calc(6px / var(--height-divider));     /* 1px */
+    --height-s: calc(24px / var(--height-divider));     /* 4px */
+    --height-m: calc(32px / var(--height-divider));     /* 6px */
+    --height-l: calc(48px / var(--height-divider));     /* 8px */
+    --height-xl: calc(64px / var(--height-divider));    /* 9px */
+}

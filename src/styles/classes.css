@@ -1,104 +1,104 @@
 @import url('./theme.css');
 
-.std .background {
-    background-color: var(--std-color-bg);
+.background {
+    background-color: var(--color-bg);
 }
 
-.std .flex-row {
+.flex-row {
     display: flex;
     flex-direction: row;
 }
 
-.std .flex-column {
+.flex-column {
     display: flex;
     flex-direction: column;
 }
 
-.std .justify-center {
+.justify-center {
     justify-content: center;
 }
 
-.std .justify-between {
+.justify-between {
     justify-content: space-between;
 }
 
-.std .align-center {
+.align-center {
     align-items: center;
 }
 
-.std .elevation-s {
-    box-shadow: var(--std-shadow-s);
+.elevation-s {
+    box-shadow: var(--shadow-s);
 }
 
-.std .elevation-m {
-    box-shadow: var(--std-shadow-m);
+.elevation-m {
+    box-shadow: var(--shadow-m);
 }
 
-.std .elevation-l {
-    box-shadow: var(--std-shadow-l);
+.elevation-l {
+    box-shadow: var(--shadow-l);
 }
 
-.std .radius-s {
-    border-radius: var(--std-radius-s)
+.radius-s {
+    border-radius: var(--radius-s)
 }
 
-.std .radius-m {
-    border-radius: var(--std-radius-m)
+.radius-m {
+    border-radius: var(--radius-m)
 }
 
-.std .radius-l {
-    border-radius: var(--std-radius-l)
+.radius-l {
+    border-radius: var(--radius-l)
 }
 
-.std .margin-s {
-    margin: var(--std-gutter-s)
+.margin-s {
+    margin: var(--gutter-s)
 }
 
-.std .margin-m {
-    margin: var(--std-gutter-m)
+.margin-m {
+    margin: var(--gutter-m)
 }
 
-.std .margin-l {
-   margin: var(--std-gutter-l)
+.margin-l {
+   margin: var(--gutter-l)
 }
 
-.std .margin-xl {
-   margin: var(--std-gutter-xl)
+.margin-xl {
+   margin: var(--gutter-xl)
 }
 
-.std .padding-s {
-    padding: var(--std-gutter-s)
+.padding-s {
+    padding: var(--gutter-s)
 }
 
-.std .padding-m {
-    padding: var(--std-gutter-m)
+.padding-m {
+    padding: var(--gutter-m)
 }
 
-.std .padding-l {
-   padding: var(--std-gutter-l)
+.padding-l {
+   padding: var(--gutter-l)
 }
 
-.std .padding-xl {
-   padding: var(--std-gutter-xl)
+.padding-xl {
+   padding: var(--gutter-xl)
 }
 
-.std .font-bold {
+.font-bold {
     font-weight: bold;
 }
 
-.std .font-light {
+.font-light {
     font-weight: 300;
 }
 
-.std .font-thin {
+.font-thin {
     font-weight: 100;
 }
 
-.std .hover:hover {
-    background-color: var(--std-color-hover);
+.hover:hover {
+    background-color: var(--color-hover);
 }
 
-.std .fade-in {
+.fade-in {
     animation: fadein 1s;
 }
 

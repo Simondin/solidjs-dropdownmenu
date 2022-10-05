@@ -1,0 +1,10 @@
+.std {
+    --scale-xxs: calc(8 / var(--scale-base, 24));   /* 0,33 */
+    --scale-xs: calc(16 / var(--scale-base, 24));   /* 0,66 */
+    --scale-s: calc(20 / var(--scale-base, 24));    /* 0,83 */
+    --scale-m: calc(24 / var(--scale-base, 24));    /* 1    */
+    --scale-l: calc(32 / var(--scale-base, 24));    /* 1,33 */
+    --scale-xl: calc(36 / var(--scale-base, 24));   /* 1,5  */
+    --scale-xxl: calc(40 / var(--scale-base, 24));  /* 1,66 */
+    --scale-xxxl: calc(48 / var(--scale-base, 24));  /* 2   */
+}

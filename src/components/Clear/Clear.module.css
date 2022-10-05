@@ -3,3 +3,7 @@
 .icon {
     fill: var(--fill-color);
 }
+
+.icon:hover {
+    fill: var(--color-cancel)
+}

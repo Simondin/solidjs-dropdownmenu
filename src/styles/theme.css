@@ -2,23 +2,29 @@
 @import url("./light-theme-props.css");
 @import url("./spacing-props.css");
 @import url("./radius-props.css");
+@import url("./size-props.css");
+@import url("./scale-props.css");
 
 
 .std {
-    --std-gutter-divider: 2;
-    --std-radius-divider: 2;
+    --gutter-divider: 2;
+    --radius-divider: 2;
+    --scale-base: 24;
+    --height-divider: 6;
+    --gutter: 4px;
+    --border: 1px;
 }
 
 @media (min-width: 700px) {
     .std {
-        --std-gutter-divider: 1.2;
-        --std-radius-divider: 1.2;
+        --gutter-divider: 1.2;
+        --radius-divider: 1.2;
     }
 }
 
 @media (min-width: 1200px) {
     .std {
-        --std-gutter-divider: 1;
-        --std-radius-divider: 1;
+        --gutter-divider: 1;
+        --radius-divider: 1;
     }
 }

@@ -8,7 +8,13 @@ const data: DataType [] = [
         label: "Services",
         children: [
             {
-                label: "web design"
+                label: "web design",
+                children: [
+                    {
+                        label: "Figma",
+
+                    }
+                ]
             },
             {
                 label: "web development",
@@ -17,7 +23,7 @@ const data: DataType [] = [
                         label: "Frontend",
                         children: [
                             {
-                                label: "React",
+                                label: "Reactasdasda sdas dasd as da sd as d asd ",
                             },
                             {
                                 label: "Vue",
@@ -38,7 +44,8 @@ const data: DataType [] = [
                 ],
             },
             {
-                label: "SEO"
+                label: "SEO",
+                disabled: true,
             }
         ]
     },

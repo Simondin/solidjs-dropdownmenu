@@ -1,18 +1,33 @@
 import type { Component } from 'solid-js';
-import styles from './App.module.css'
 import Dropdown from './components/Dropdown';
-import { SelectionProvider } from "./context/SelectionContext";
-import { ThemeProvider } from "./context/ThemeContext";
-import data from './data/Data';
+import { useTheme } from "./context/ThemeContext";
+import styles from './App.module.css'
+
+import './styles/globals.css'
+import "./styles/theme.css"
+import "./styles/classes.css"
 
 const App: Component = () => {
+    const [themeState, {changeTheme}] = useTheme()
     return (
-        <ThemeProvider color="#335d92" title="Context Example">
-            <SelectionProvider data={data}>
-                {/* <Select /> */}
-                <Dropdown />
-            </SelectionProvider>
-        </ThemeProvider>
+        <div
+            class={`${styles.main} std padding-m flex-row justify-between`}
+            app-theme={`${themeState.theme}`}
+        >
+            <Dropdown
+                clearable
+                // block
+                size="xs"
+                itemSize="s"
+            />
+            <label class={styles.switch}>
+                <input
+                    type="checkbox"
+                    onClick={() => changeTheme()}
+                />
+                <span class={`${styles.slider} ${styles.round}`} />
+            </label>
+        </div>
     );
 };
 

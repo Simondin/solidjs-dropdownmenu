@@ -1,3 +1,28 @@
+@import url('../../styles/theme.css');
+
 .DropdownItem {
-    padding: 8px;
+    padding: var(--gutter-m) var(--gutter-l);
+    cursor: pointer;
+    color: var(--text-color-primary);
+}
+
+.DropdownItem.Selected {
+    background-color: var(--color-hover);
+}
+
+.DropdownItem.Selected span{
+    font-weight: 600;
+}
+
+.DropdownItem.Disabled {
+    color: var(--text-color-disabled);
+    cursor: not-allowed;
+}
+
+.DropdownItem:hover {
+    background-color: var(--color-hover)
+}
+
+.DropdownItem > :first-child {
+    margin-right: var(--gutter-s);
 }
