@@ -1,4 +1,4 @@
-.std {
+.drpdwn {
     --radius-xs: calc(2px / var(--radius-divider, 1));
     --radius-s: calc(4px / var(--radius-divider, 1));
     --radius-m: calc(5px / var(--radius-divider, 1));

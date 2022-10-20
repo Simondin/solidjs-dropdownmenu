@@ -1,4 +1,4 @@
-.std {
+.drpdwn {
     --size-xxs: calc(var(--gutter, 4px) * 1);   /*  4px  */
     --size-xs: calc(var(--gutter, 4px) * 2);    /*  8px */
     --size-s: calc(var(--gutter, 4px) * 3);     /*  12px */

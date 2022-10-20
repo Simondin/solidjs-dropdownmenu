@@ -19,9 +19,8 @@ const DropdownItem: Component<IDropdownItemProps> = ({ data, selected }) => {
 
     return (
         <div
-            class="flex-row align-center justify-between"
+            class={`flex-row align-center justify-between ${styles.DropdownItem}`}
             classList={{
-                [styles.DropdownItem] : true,
                 [styles.Selected]: isSelected(),
                 [styles.Disabled]: item.disabled,
             }}
@@ -31,7 +30,8 @@ const DropdownItem: Component<IDropdownItemProps> = ({ data, selected }) => {
             }}
         >
             <span
-                class={styles.DropdownItemLabel}
+                class={`text-ellipses ${styles.DropdownItemLabel}`}
+                title={item.label}
             >
                 {item.label}
             </span>

@@ -102,6 +102,13 @@
     animation: fadein 1s;
 }
 
+.text-ellipses {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;

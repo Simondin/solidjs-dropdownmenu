@@ -6,7 +6,7 @@
 @import url("./scale-props.css");
 
 
-.std {
+.drpdwn {
     --gutter-divider: 2;
     --radius-divider: 2;
     --scale-base: 24;
@@ -16,14 +16,14 @@
 }
 
 @media (min-width: 700px) {
-    .std {
+    .drpdwn {
         --gutter-divider: 1.2;
         --radius-divider: 1.2;
     }
 }
 
 @media (min-width: 1200px) {
-    .std {
+    .drpdwn {
         --gutter-divider: 1;
         --radius-divider: 1;
     }

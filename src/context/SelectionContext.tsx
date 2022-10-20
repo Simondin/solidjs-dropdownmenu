@@ -53,7 +53,11 @@ function exploreItems(node: DataType, idx: number, parent: string, level: number
     }
 
     items[level][key] = {
-        item: node,
+        item: {
+            label: node.label,
+            children: Boolean(node.children?.length),
+            disabled: Boolean(node.disabled),
+        },
         level,
         key,
         parent,
