@@ -1,0 +1,60 @@
+@import url('../../styles/theme.css');
+
+.DropdownSelector {
+    background-color: var(--color-bg);
+    border: solid var(--border) var(--color-separator);
+    border-radius: var(--radius-m);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 150px;
+    padding: var(--height-m) 0;
+}
+
+.DropdownSelector.DropdownSize_xs {
+    padding: var(--height-xs) 0;
+}
+
+.DropdownSelector.DropdownSize_s {
+    padding: var(--height-s) 0;
+}
+
+.DropdownSelector.DropdownSize_m {
+    padding: var(--height-m) 0;
+}
+
+.DropdownSelector.DropdownSize_l {
+    padding: var(--height-l) 0;
+}
+
+.DropdownSelector.DropdownSize_xl {
+    padding: var(--height-xl) 0;
+}
+
+.DropdownSelector.Block {
+    display: flex;
+}
+
+.DropdownSelector.DropdownSelectorBlock {
+    display: flex;
+}
+
+.DropdownSelector > * {
+    margin-left: var(--gutter-s);
+}
+
+.DropdownSelectorLabel {
+    color: var(--text-color-disabled);
+}
+
+.DropdownSelectorLabel.Selected {
+    color: var(--text-color-primary);
+    font-weight: 600;
+}
+
+.DropdownSelectorActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

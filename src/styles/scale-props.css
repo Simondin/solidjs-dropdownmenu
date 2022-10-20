@@ -1,4 +1,4 @@
-.std {
+.drpdwn {
     --scale-xxs: calc(8 / var(--scale-base, 24));   /* 0,33 */
     --scale-xs: calc(16 / var(--scale-base, 24));   /* 0,66 */
     --scale-s: calc(20 / var(--scale-base, 24));    /* 0,83 */

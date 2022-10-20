@@ -1,7 +1,9 @@
-import { DataType } from "./DataType";
-
 export type DropdownItemType = {
-    item: DataType,
+    item: {
+        label: string
+        children: boolean
+        disabled: boolean
+    },
     level: number,
     key: string,
     parent: string,

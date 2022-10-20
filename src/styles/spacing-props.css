@@ -1,7 +1,9 @@
-.std {
+.drpdwn {
     --gutter-xs: calc(4px / var(--gutter-divider, 1));
     --gutter-s: calc(8px / var(--gutter-divider, 1));
     --gutter-m: calc(12px / var(--gutter-divider, 1));
     --gutter-l: calc(16px / var(--gutter-divider, 1));
     --gutter-xl: calc(24px / var(--gutter-divider, 1));
+    --gutter-xxl: calc(32px / var(--gutter-divider, 1));
+    --gutter-xxxl: calc(48px / var(--gutter-divider, 1));
 }

@@ -7,10 +7,6 @@
   flex-grow: 1;
 }
 
-.main > :first-child {
-  flex: 1;
-}
-
 .switch {
   position: relative;
   display: inline-block;

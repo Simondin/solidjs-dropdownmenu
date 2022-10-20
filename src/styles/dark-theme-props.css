@@ -1,4 +1,4 @@
-.std[app-theme="dark"] {
+.drpdwn[app-theme="dark"] {
     --text-color-primary: #ffffff;
     --text-color-disabled: #7d7d7d;
     --color-primary-accent: #6e494e;
@@ -8,7 +8,7 @@
     --color-hover: #3c3f43;
     --color-cancel: #f94f4f;
     --main-color-bg: #262626;
-    --color-bg: #292D33;
+    --color-bg: #4e4e4e;
     --fill-color: #ffffff;
     --border-color-primary: #3c3f43;
 }

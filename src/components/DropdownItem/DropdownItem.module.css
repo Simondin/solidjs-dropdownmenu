@@ -1,9 +1,10 @@
 @import url('../../styles/theme.css');
 
 .DropdownItem {
-    padding: var(--gutter-m) var(--gutter-l);
+    padding: var(--gutter-m) var(--gutter-s);
     cursor: pointer;
     color: var(--text-color-primary);
+    width: 140px;
 }
 
 .DropdownItem.Selected {

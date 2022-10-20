@@ -23,7 +23,7 @@ const data: DataType [] = [
                         label: "Frontend",
                         children: [
                             {
-                                label: "Reactasdasda sdas dasd as da sd as d asd ",
+                                label: "React",
                             },
                             {
                                 label: "Vue",

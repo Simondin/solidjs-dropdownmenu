@@ -1,0 +1,37 @@
+@import url('../../styles/theme.css');
+
+.DropdownMenu {
+    background-color: var(--color-bg);
+    display: inline-flex;
+    top: var(--gutter-xxxl);
+    border: solid var(--border) var(--color-separator);
+    border-radius: var(--radius-s);
+    padding: var(--gutter-xs);
+    position: absolute;
+    z-index: 10;
+}
+
+.DropdownMenuGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.DropdownMenuGroup > * {
+    height: calc(var(--size-m)* 2);
+}
+
+.DropdownMenuGroup.GroupSize_s > * {
+    height: calc(var(--size-s)* 2);
+}
+
+.DropdownMenuGroup.GroupSize_m > * {
+    height: calc(var(--size-m)* 2);
+}
+
+.DropdownMenuGroup.GroupSize_l > * {
+    height: calc(var(--size-l)* 2);
+}
+
+.DropdownMenuGroup.GroupSize_xl > * {
+    height: calc(var(--size-xl)* 2);
+}
