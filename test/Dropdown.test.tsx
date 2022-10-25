@@ -27,7 +27,7 @@ describe('Dropdown component', () => {
         data.forEach((it, idx) => exploreItems(it, idx, menuItems))
     })
 
-    it('should show default 'Select' placeholder', () => {
+    it('should show default "Select" placeholder', () => {
         render(() => <Dropdown data={data} />)
 
         const selectElm = screen.getByText('Select')
