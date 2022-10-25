@@ -1,9 +1,9 @@
-import { Accessor, Component, For, onCleanup, onMount, Show } from "solid-js";
+import { Accessor, Component, For, onCleanup, onMount, Show } from 'solid-js';
 import styles from './DropdownMenu.module.css'
-import { useSelection } from "../../context/SelectionContext";
-import DropdownItem from "../DropdownItem";
-import { DropdownItemType } from "../../types/DropdownItemType";
-import { getComponentSize, Sizes } from "../../types/SizeEnum";
+import { useSelection } from '../../context/SelectionContext';
+import DropdownItem from '../DropdownItem';
+import { DropdownItemType } from '../../types/DropdownItemType';
+import { getComponentSize, Sizes } from '../../types/SizeEnum';
 
 interface IDropdownMenuProps {
     itemSize?: string
@@ -50,13 +50,13 @@ const DropdownMenu: Component<IDropdownMenuProps> = ({
     };
 
     onMount(() => {
-        document.addEventListener("mousedown", handler);
-        document.addEventListener("touchstart", handler);
+        document.addEventListener('mousedown', handler);
+        document.addEventListener('touchstart', handler);
     })
 
     onCleanup(() => {
-        document.removeEventListener("mousedown", handler);
-        document.removeEventListener("touchstart", handler);
+        document.removeEventListener('mousedown', handler);
+        document.removeEventListener('touchstart', handler);
     })
 
 

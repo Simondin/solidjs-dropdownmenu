@@ -1,9 +1,9 @@
 import styles from './DropdownSelector.module.css'
-import { Accessor, Component, onCleanup, onMount, Show } from "solid-js";
-import { useSelection } from "../../context/SelectionContext";
-import Clear from "../Clear";
-import Expand from "../Expand";
-import { getComponentSize, Sizes } from "../../types/SizeEnum";
+import { Accessor, Component, onCleanup, onMount, Show } from 'solid-js';
+import { useSelection } from '../../context/SelectionContext';
+import Clear from '../Clear';
+import Expand from '../Expand';
+import { getComponentSize, Sizes } from '../../types/SizeEnum';
 
 interface IDropdownSelectorProps {
     block?: boolean
@@ -43,13 +43,13 @@ const DropdownSelector: Component<IDropdownSelectorProps> = ({
     };
 
     onMount(() => {
-        document.addEventListener("mousedown", handler);
-        document.addEventListener("touchstart", handler);
+        document.addEventListener('mousedown', handler);
+        document.addEventListener('touchstart', handler);
     })
 
     onCleanup(() => {
-        document.removeEventListener("mousedown", handler);
-        document.removeEventListener("touchstart", handler);
+        document.removeEventListener('mousedown', handler);
+        document.removeEventListener('touchstart', handler);
     })
 
     return (
@@ -59,22 +59,24 @@ const DropdownSelector: Component<IDropdownSelectorProps> = ({
                 [styles.Block]: block,
             }}
             ref={selectorRef!}
+            data-testid='dropdown-selector'
         >
             <span
                 class={`text_ellipses ${styles.DropdownSelectorLabel}`}
                 classList={{
                     [styles.Selected]: Boolean(selectionState.current),
                 }}
+                data-testid='dropdown-selection'
             >
                 {message}
             </span>
-            <div class="flex-row align-center justify-between">
+            <div class='flex-row align-center justify-between'>
                 <Show when={clearable && selectionState.current}>
                     <Clear
                         ref={clearRef}
                         onClick={() => clearSelections()} />
                 </Show>
-                <Expand size="m" />
+                <Expand size='m' />
             </div>
         </div>
     )

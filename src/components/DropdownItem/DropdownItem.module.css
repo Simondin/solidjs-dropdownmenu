@@ -4,7 +4,7 @@
     padding: var(--gutter-m) var(--gutter-s);
     cursor: pointer;
     color: var(--text-color-primary);
-    width: 140px;
+    min-width: 140px;
 }
 
 .DropdownItem.Selected {

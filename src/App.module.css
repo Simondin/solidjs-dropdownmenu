@@ -28,7 +28,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-bg);
+  background-color: var(--text-color-primary);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -40,7 +40,7 @@
   width: var(--size-xl);
   left: var(--gutter);
   bottom: var(--gutter);
-  background-color: var(--text-color-primary);
+  background-color: var(--color-bg);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -58,7 +58,7 @@ input:checked+.slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 16px;
-  border: var(--border) solid var(--text-color-primary);
+  border: var(--border) solid;
 }
 
 .slider.round:before {

@@ -1,11 +1,10 @@
-import { createContext, useContext, ParentComponent } from "solid-js"
-import { createStore } from "solid-js/store"
-import { DataType } from "../types/DataType"
-import { DropdownItemType } from "../types/DropdownItemType"
+import { createContext, useContext, ParentComponent } from 'solid-js'
+import { createStore } from 'solid-js/store'
+import { DataType } from '../types/DataType'
+import { DropdownItemType } from '../types/DropdownItemType'
+import { exploreItems, START_LEVEL } from '../utilities/readData'
 
-const START_LEVEL = 0
-
-type ItemsByGroupType = {
+export type ItemsByGroupType = {
     [name: string]: {
         [name: string]: DropdownItemType
     }
@@ -43,37 +42,12 @@ const SelectionContext = createContext<SelectionContextValue>([
     }
 ])
 
-function exploreItems(node: DataType, idx: number, parent: string, level: number, items: ItemsByGroupType): void {
-    const { children } = node
-    const key = `${parent}${idx}`
-    const currentLevel = level + 1
-
-    if (!(level in items)) {
-        items[level] = {}
-    }
-
-    items[level][key] = {
-        item: {
-            label: node.label,
-            children: Boolean(node.children?.length),
-            disabled: Boolean(node.disabled),
-        },
-        level,
-        key,
-        parent,
-    }
-
-    if (!children) {
-        return
-    }
-
-    children.forEach((it, idx) => exploreItems(it, idx, key, currentLevel, items))
-}
-
 export const SelectionProvider: ParentComponent<SelectionContextProps> = (props) => {
     const itemsByGroup : ItemsByGroupType = {}
 
-    props.data.forEach((it, idx) => exploreItems(it, idx, '', START_LEVEL, itemsByGroup))
+    props.data.forEach((it, idx) => exploreItems(it, idx, itemsByGroup))
+
+    // console.log(itemsByGroup)
 
     const [ state, setState ] = createStore({
         ...defaultState,

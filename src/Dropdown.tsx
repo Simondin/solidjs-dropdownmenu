@@ -1,12 +1,12 @@
 import { Component, createSignal, Show } from 'solid-js';
 import DropdownSelector from './components/DropdownSelector';
 import DropdownMenu from './components/DropdownMenu';
-import { SelectionProvider } from "./context/SelectionContext";
+import { SelectionProvider } from './context/SelectionContext';
 import { ThemeEnum } from './context/ThemeContext';
 
 import './styles/globals.css'
-import "./styles/theme.css"
-import "./styles/classes.css"
+import './styles/theme.css'
+import './styles/classes.css'
 import { DataType } from './types/DataType';
 
 interface IDropdownProps {
@@ -33,7 +33,7 @@ const Dropdown: Component<IDropdownProps> = (props) => {
 
     return (
         <SelectionProvider data={data ?? []}>
-            <div class="drpdwn flex-column" app-theme={`${props.theme ?? ThemeEnum.light}`} >
+            <div class='drpdwn flex-column' app-theme={`${props.theme ?? ThemeEnum.light}`} >
                 <DropdownSelector
                     block={block}
                     clearable={clearable}

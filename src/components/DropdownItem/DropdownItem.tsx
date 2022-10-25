@@ -1,10 +1,10 @@
 import {
     Component,
-} from "solid-js";
+} from 'solid-js';
 import styles from './DropdownItem.module.css';
-import { useSelection } from "../../context/SelectionContext"
-import { DropdownItemType } from "../../types/DropdownItemType";
-import Arrow from "../Arrow/Arrow";
+import { useSelection } from '../../context/SelectionContext'
+import { DropdownItemType } from '../../types/DropdownItemType';
+import Arrow from '../Arrow/Arrow';
 
 interface IDropdownItemProps {
     data: DropdownItemType,
@@ -28,6 +28,7 @@ const DropdownItem: Component<IDropdownItemProps> = ({ data, selected }) => {
                 if (item.disabled) return
                 updateSelection(level, key)
             }}
+            data-testid={item.label}
         >
             <span
                 class={`text-ellipses ${styles.DropdownItemLabel}`}
