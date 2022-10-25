@@ -8,15 +8,6 @@ const data: DataType [] = [
         label: "Services",
         children: [
             {
-                label: "web design",
-                children: [
-                    {
-                        label: "Figma",
-
-                    }
-                ]
-            },
-            {
                 label: "web development",
                 children: [
                     {
@@ -42,6 +33,15 @@ const data: DataType [] = [
                         ],
                     },
                 ],
+            },
+            {
+                label: "web design",
+                children: [
+                    {
+                        label: "Figma",
+
+                    }
+                ]
             },
             {
                 label: "SEO",

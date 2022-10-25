@@ -1,5 +1,5 @@
-import { createContext, useContext, ParentComponent } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createContext, useContext, ParentComponent } from 'solid-js';
+import { createStore } from 'solid-js/store';
 
 export enum ThemeEnum {
     light = 'light',
