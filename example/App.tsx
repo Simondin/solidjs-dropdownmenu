@@ -1,21 +1,18 @@
 import type { Component } from 'solid-js';
-import { SelectionProvider } from './context/SelectionContext';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
-import Dropdown from './Dropdown';
+import { ThemeProvider, useTheme } from '../src/context/ThemeContext';
+import Dropdown from '../src/Dropdown';
 
 import styles from './App.module.css'
-import './styles/globals.css'
-import './styles/theme.css'
-import './styles/classes.css'
+import '../src/styles/globals.css'
+import '../src/styles/theme.css'
+import '../src/styles/classes.css'
 
-import data from './data/Data';
+import data from '../src/data/Data';
 
 const App: Component = () => {
     return (
         <ThemeProvider theme='light'>
-            <SelectionProvider data={data ?? []}>
-                <NestedComponent />
-            </SelectionProvider>
+            <NestedComponent />
         </ThemeProvider>
     );
 };

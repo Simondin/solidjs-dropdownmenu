@@ -11,6 +11,7 @@ const Arrow : Component<IIconProps> = ({ size }) => {
             width='24'
             class={styles.icon}
             style={{'scale': `var(--scale-${iconSize})`}}
+            data-testid='arrow-button'
         >
             <path d='M9.4 18 8 16.6l4.6-4.6L8 7.4 9.4 6l6 6Z' />
         </svg>

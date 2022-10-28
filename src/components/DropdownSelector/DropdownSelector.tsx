@@ -74,7 +74,8 @@ const DropdownSelector: Component<IDropdownSelectorProps> = ({
                 <Show when={clearable && selectionState.current}>
                     <Clear
                         ref={clearRef}
-                        onClick={() => clearSelections()} />
+                        onClick={() => clearSelections()}
+                    />
                 </Show>
                 <Expand size='m' />
             </div>

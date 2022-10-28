@@ -1,4 +1,4 @@
-@import url('./styles/theme.css');
+@import url('../src/styles/theme.css');
 
 .main {
   background-color: var(--main-color-bg);

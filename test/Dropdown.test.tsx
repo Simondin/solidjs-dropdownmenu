@@ -53,6 +53,40 @@ describe('Dropdown component', () => {
         }
     })
 
+    it(`should hide the menu if clicked outside the component`, async () => {
+        const { container } = render(() => <Dropdown data={data} />)
+
+        const selector = screen.getByTestId('dropdown-selector')
+        fireEvent.mouseDown(selector)
+
+        expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument()
+
+        fireEvent.mouseDown(container)
+
+        expect(screen.queryByTestId('dropdown-menu')).toBeNull()
+    })
+
+    it(`should not hide the menu if the component or one of it's children are clicked`, async () => {
+        const { container } = render(() => <Dropdown data={data} />)
+
+        const selector = screen.getByTestId('dropdown-selector')
+        fireEvent.mouseDown(selector)
+
+        expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument()
+
+        fireEvent.mouseDown(container)
+
+        expect(screen.queryByTestId('dropdown-menu')).toBeNull()
+    })
+
+    it(`should not show the menu if the component or one of it's children are not clicked`, async () => {
+        const { container } = render(() => <Dropdown data={data} />)
+
+        fireEvent.mouseDown(container)
+
+        expect(screen.queryByTestId('dropdown-menu')).toBeNull()
+    })
+
     it(`should update selection on level ${START_LEVEL} menu click`, async () => {
         render(() => <Dropdown data={data} />)
 
@@ -61,7 +95,8 @@ describe('Dropdown component', () => {
         fireEvent.mouseDown(selector)
 
         for (const it of Object.values(menuItems[START_LEVEL])) {
-            const menuItem = screen.getByText(it.item.label) as HTMLSpanElement
+            if (it.item.disabled) continue
+            const menuItem = screen.getByText(it.item.label)
             fireEvent.click(menuItem)
             expect(selection.textContent).toEqual(menuItem.textContent)
         }
@@ -122,6 +157,48 @@ describe('Dropdown component', () => {
             }
             ++level
         }
-        expect(selection.textContent).toEqual(labels.join(' / '))
+        expect(selection).toHaveTextContent(labels.join(' / '))
+    })
+
+    it(`should show clear selection`, async () => {
+        render(() => <Dropdown data={data} clearable/>)
+
+        const selector = screen.getByTestId('dropdown-selector')
+
+        fireEvent.mouseDown(selector)
+
+        const firstItem = menuItems[START_LEVEL][0]
+        const menuItem = screen.getByTestId(firstItem.item.label)
+
+        fireEvent.click(menuItem)
+
+        const selection = screen.getByTestId('dropdown-selection')
+
+        expect(selection).toHaveTextContent(firstItem.item.label)
+
+        const clearButton = screen.getByTestId('clear-button')
+        expect(clearButton).toBeInTheDocument()
+        fireEvent.click(clearButton)
+
+        expect(selection).toHaveTextContent('Select')
+    })
+
+    it(`should not update the selecion if disable menu item is clicked`, async () => {
+        render(() => <Dropdown data={data} />)
+
+        const selector = screen.getByTestId('dropdown-selector')
+        const selection = screen.getByTestId('dropdown-selection')
+        const currentSelection = selection.textContent || ''
+
+        fireEvent.mouseDown(selector)
+
+        for (const it of Object.values(menuItems[START_LEVEL])) {
+            if (! it.item.disabled) continue
+
+            fireEvent.click(screen.getByTestId(it.item.label))
+            break
+        }
+
+        expect(selection).toHaveTextContent(currentSelection)
     })
 })

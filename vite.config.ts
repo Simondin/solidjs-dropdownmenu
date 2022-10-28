@@ -19,6 +19,14 @@ export default defineConfig({
         deps: {
             inline: [/solid-js/, /solid-testing-library/],
         },
+        coverage: {
+            provider: 'c8', //'istanbul', // or 'c8'
+            reporter: ['text', 'json', 'html'],
+            exclude: [
+                'node_modules/',
+                'src/setupTests.ts',
+            ],
+        },
     },
     resolve: {
         conditions: ['development', 'browser'],

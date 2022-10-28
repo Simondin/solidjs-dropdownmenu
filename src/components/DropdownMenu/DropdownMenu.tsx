@@ -64,6 +64,7 @@ const DropdownMenu: Component<IDropdownMenuProps> = ({
         <div
             class={styles.DropdownMenu}
             ref={menuRef!}
+            data-testid='dropdown-menu'
         >
             <For each={Object.values(selectionState.data)}>
                 {it => (

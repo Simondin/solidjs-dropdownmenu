@@ -1,6 +1,13 @@
+
 # solid-dropdownmenu
 
 Dropdown Menu made with Solid JS
+
+<p align="center">
+    <a href="https://github.com/github/docs/actions/workflows/node.js.yml/badge.svg" target="_blank" rel="noopener">
+        <img src="https://github.com/github/docs/actions/workflows/node.js.yml/badge.svg/badge.svg" alt="build" />
+    </a>
+</p>
 
 ## Usage
 

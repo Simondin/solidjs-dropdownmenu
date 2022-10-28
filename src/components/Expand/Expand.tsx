@@ -13,6 +13,7 @@ const Expand : Component<IIconProps> = ({ size }) => {
             width='24'
             class={styles.icon}
             style={{ 'scale': `var(--scale-${iconSize})` }}
+            data-testid='expand-button'
         >
             <path d='m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z' />
         </svg>

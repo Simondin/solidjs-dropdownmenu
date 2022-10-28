@@ -45,12 +45,12 @@ const data: DataType [] = [
             },
             {
                 label: "SEO",
-                disabled: true,
             }
         ]
     },
     {
-        label: "About"
+        label: "About",
+        disabled: true,
     }
 ]
 
